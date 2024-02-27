@@ -5,9 +5,10 @@ function aumentar() {
     fetch('http://localhost:8080/data')
         .then(response => response.text())
         .then(data => {
-            let volume = parseInt(data);
-            total.innerHTML = "Total da Caixa:" + volume + "L";
-            tem.innerHTML = "Quanto tem na caixa: " + volume + "L" ;
+            let totalValue = parseInt(totalValue);
+            let temValue = paserInt(temValue)
+            total.innerHTML = "Total da Caixa:" + totalValue + "L";
+            tem.innerHTML = "Quanto tem na caixa: " + temValue + "L" ;
         })
         .catch(error => {
             console.error('Ocorreu um erro:', error);
